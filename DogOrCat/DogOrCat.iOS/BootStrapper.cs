@@ -1,5 +1,4 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
 using DogOrCat.Interfaces;
 using DogOrCat.iOS.CoreML;
 

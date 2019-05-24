@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using DogOrCat.ViewModels;
+﻿using DogOrCat.ViewModels;
 using Xamarin.Forms;
 
 namespace DogOrCat.Views

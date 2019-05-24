@@ -1,9 +1,7 @@
-﻿using System;
-using DogOrCat.Framework;
+﻿using DogOrCat.Framework;
 using DogOrCat.ViewModels;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using DogOrCat.Views;
+using Xamarin.Forms;
 
 namespace DogOrCat
 {

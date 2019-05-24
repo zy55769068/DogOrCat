@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DogOrCat.Models;
+﻿using DogOrCat.Models;
 
 namespace DogOrCat.ViewModels
 {
     public class ResultViewModel : ViewModel
     {
+        private string _description;
+
+        private byte[] _photoBytes;
         private string _title;
+
         public string Title
         {
             get => _title;
@@ -18,7 +19,6 @@ namespace DogOrCat.ViewModels
             }
         }
 
-        private string _description;
         public string Description
         {
             get => _description;
@@ -29,7 +29,6 @@ namespace DogOrCat.ViewModels
             }
         }
 
-        private byte[] _photoBytes;
         public byte[] PhotoBytes
         {
             get => _photoBytes;

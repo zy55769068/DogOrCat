@@ -8,7 +8,7 @@ namespace DogOrCat.Framework
 
         public static void Initialize(IContainer Container)
         {
-            Resolver.container = Container;
+            container = Container;
         }
 
         public static T Resolve<T>()

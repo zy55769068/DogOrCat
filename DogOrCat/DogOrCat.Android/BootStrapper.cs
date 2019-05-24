@@ -2,14 +2,15 @@
 using DogOrCat.Droid.TensorFlowClassfication;
 using DogOrCat.Interfaces;
 
-namespace DogOrNot.Droid
+namespace DogOrCat.Droid
 {
-    public class BootStrapper: DogOrCat.Framework.BootStrapper
+    public class BootStrapper : Framework.BootStrapper
     {
         public static void Init()
         {
             var instance = new BootStrapper();
         }
+
         protected override void Initialize()
         {
             base.Initialize();

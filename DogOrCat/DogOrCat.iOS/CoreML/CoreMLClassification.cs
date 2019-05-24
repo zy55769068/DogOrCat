@@ -28,7 +28,7 @@ namespace DogOrCat.iOS.CoreML
 
             var handler = new VNImageRequestHandler(data, CGImagePropertyOrientation.Up, new VNImageOptions());
 
-            handler.Perform(new VNRequest[] { classificationRequest }, out error);
+            handler.Perform(new VNRequest[] {classificationRequest}, out error);
         }
 
         public event EventHandler<ClassificationEventArgs> ClassificationCompleted;
