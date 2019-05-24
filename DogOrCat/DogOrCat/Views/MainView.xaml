@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <ContentPage x:Class="DogOrCat.Views.MainView"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
              Visual="Material">
     <ContentPage.Content>
         <StackLayout>
@@ -10,12 +12,14 @@
             <Label Text="Welcome to Xamarin Forms!"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
-            <Button BackgroundColor="#512da8"
+            <Button WidthRequest="120"
+                    BackgroundColor="#ba6b6c"
                     Command="{Binding TakePhotoCommand}"
                     Text="拍照"
                     TextColor="White"
                     HorizontalOptions="Center" />
-            <Button BackgroundColor="#512da8"
+            <Button WidthRequest="120"
+                    BackgroundColor="#ef9a9a"
                     Command="{Binding PickPhotoCommand}"
                     Text="选择相册图片"
                     TextColor="White"

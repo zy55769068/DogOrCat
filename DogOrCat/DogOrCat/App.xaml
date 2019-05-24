@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Application x:Class="DogOrCat.App"
              xmlns="http://xamarin.com/schemas/2014/forms"
@@ -10,7 +10,7 @@
         <ResourceDictionary>
 
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="#512da8" />
+                <Setter Property="BarBackgroundColor" Value="#ef9a9a" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
         </ResourceDictionary>
