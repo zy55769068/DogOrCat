@@ -1,6 +1,9 @@
 ﻿using System;
+using DogOrCat.Framework;
+using DogOrCat.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DogOrCat.Views;
 
 namespace DogOrCat
 {
@@ -10,7 +13,11 @@ namespace DogOrCat
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var mainView = Resolver.Resolve<MainView>();
+            var navigationPage = new NavigationPage(mainView);
+
+            ViewModel.Navigation = navigationPage.Navigation;
+            MainPage = navigationPage;
         }
 
         protected override void OnStart()

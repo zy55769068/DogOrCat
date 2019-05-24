@@ -23,6 +23,7 @@ namespace DogOrCat.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            BootStrapper.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

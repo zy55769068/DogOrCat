@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="DogOrCat.Views.ResultView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:DogOrCat.Converters"
+             Title="{Binding Title}"
+             Visual="Material">
+    <ContentPage.Resources>
+        <converters:BytesToImageConverter x:Key="BytesToMap" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image Aspect="AspectFill"
+                   Source="{Binding PhotoBytes, Converter={StaticResource BytesToMap}}" />
+            <Label Grid.Row="1"
+                   Margin="10"
+                   FontAttributes="Bold"
+                   Text="{Binding Description}"
+                   HorizontalOptions="Center" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

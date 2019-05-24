@@ -23,5 +23,7 @@
     <Folder Include="Framework\" />
     <Folder Include="Views\" />
     <Folder Include="Events\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>

@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Plugin.CurrentActivity;
+using DogOrNot.Droid;
 
 namespace DogOrCat.Droid
 {
@@ -19,8 +21,16 @@ namespace DogOrCat.Droid
 
             base.OnCreate(savedInstanceState);
 
+            this.Window.AddFlags(WindowManagerFlags.TranslucentNavigation);
+            this.Window.AddFlags(WindowManagerFlags.TranslucentStatus);
+
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            BootStrapper.Init();
+
+
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
