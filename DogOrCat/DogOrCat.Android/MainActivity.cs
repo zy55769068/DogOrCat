@@ -27,8 +27,10 @@ namespace DogOrCat.Droid
 
             Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
+            FormsMaterial.Init(this,savedInstanceState);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             BootStrapper.Init();
+
 
 
             LoadApplication(new App());

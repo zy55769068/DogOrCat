@@ -20,7 +20,10 @@ namespace DogOrCat.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+
             Forms.Init();
+            FormsMaterial.Init();
+
             BootStrapper.Init();
             LoadApplication(new App());
 
