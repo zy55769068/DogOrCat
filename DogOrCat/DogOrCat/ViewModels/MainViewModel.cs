@@ -22,6 +22,10 @@ namespace DogOrCat.ViewModels
             this.classification = classification;
         }
 
+        /// <summary>
+        /// Take photo command
+        /// </summary>
+        /// <value>The take photo command.</value>
         public ICommand TakePhotoCommand => new Command(async () =>
         {
             var photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
@@ -31,6 +35,10 @@ namespace DogOrCat.ViewModels
             HandlePhoto(photo);
         });
 
+        /// <summary>
+        /// Pick photo command.
+        /// </summary>
+        /// <value>The pick photo command.</value>
         public ICommand PickPhotoCommand => new Command(async () =>
         {
             var photo = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
@@ -40,6 +48,10 @@ namespace DogOrCat.ViewModels
             HandlePhoto(photo);
         });
 
+        /// <summary>
+        /// Handles the photo.
+        /// </summary>
+        /// <param name="photo">Photo.</param>
         private void HandlePhoto(MediaFile photo)
         {
             if (photo == null) return;
@@ -51,6 +63,11 @@ namespace DogOrCat.ViewModels
             classification.Classification(bytes);
         }
 
+        /// <summary>
+        /// Reads the photo.
+        /// </summary>
+        /// <returns>The photo.</returns>
+        /// <param name="stream">Stream.</param>
         private byte[] ReadPhoto(Stream stream)
         {
             var buffer = new byte[16 * 1024];
@@ -63,6 +80,11 @@ namespace DogOrCat.ViewModels
             }
         }
 
+        /// <summary>
+        /// Classifications the classification completed.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
         private void Classification_ClassificationCompleted(object sender, ClassificationEventArgs e)
         {
             classification.ClassificationCompleted -= Classification_ClassificationCompleted;
