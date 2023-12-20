@@ -3,7 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
-using Plugin.CurrentActivity;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Platform = Xamarin.Essentials.Platform;
@@ -28,7 +28,7 @@ namespace DogOrCat.Droid
             Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
             FormsMaterial.Init(this,savedInstanceState);
-            CrossCurrentActivity.Current.Init(this, savedInstanceState);
+
             BootStrapper.Init();
 
 

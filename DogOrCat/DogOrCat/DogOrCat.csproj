@@ -11,11 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.0.425677" />
-    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2622" />
+    <PackageReference Include="Autofac" Version="7.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
